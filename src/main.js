@@ -9,6 +9,7 @@ import reduxService from './services/reduxService'
 
 require('./styles/global.scss')
 
+//test commit
 const virtualDOM = (
   <Provider store={reduxService.getStore()}>
     {Routes}
