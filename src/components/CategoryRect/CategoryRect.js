@@ -1,5 +1,6 @@
 /* External dependencies */
 import React from 'react'
+import classNames from 'classnames'
 import autobind from 'core-decorators/lib/autobind'
 
 /* Internal dependencies */
@@ -13,9 +14,9 @@ class CategoryRect extends React.Component {
 
   render() {
     return (
-      <div className={styles.wrapper} onClick={this.handleClick}>
+      <button className={classNames(styles.wrapper, { [styles.wrapperSelected]: this.props.isSelected })} onClick={this.handleClick} >
           {this.props.children}
-      </div>
+      </button>
     )
   }
 }

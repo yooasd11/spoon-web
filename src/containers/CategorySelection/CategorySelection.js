@@ -34,8 +34,8 @@ class CategorySelection extends React.Component {
     renderCategoryRect(tagname, idx) {
       const selected = this.state.selectedList.has(tagname)
       return (
-        <CategoryRect id={tagname} onCategoryClick={this.handleCategoryClick} key={idx} >
-          {`${selected ? 'V' : '+'} ${tagname}`}
+        <CategoryRect id={tagname} onCategoryClick={this.handleCategoryClick} key={idx} isSelected={selected}>
+          {`${selected ? '✓' : '+'} ${tagname}`}
         </CategoryRect>
       )
     }
@@ -44,7 +44,7 @@ class CategorySelection extends React.Component {
         return (
             <div className={styles.wrapper}>
               <div className={styles.description}>
-                하영님<br/>보고싶은 달력을 선택해주세요.
+                하영님<br/>보고 싶은 달력을 선택해주세요.
               </div>
               <div className={styles.wrapperCategory}>
                 {categories.map(this.renderCategoryRect)}
