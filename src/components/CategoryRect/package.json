@@ -1,0 +1,6 @@
+{
+  "name": "CategoryRect",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./CategoryRect.js"
+}
